@@ -1,0 +1,20 @@
+name: Cloudsmith Push NPM
+on: push
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    name: NPM Push
+    steps:
+      - uses: actions/checkout@v2
+      - name: Push
+        id: push
+        uses: cloudsmith-io/action@master
+        with:
+          api-key: '2352304701e88ff1b8985f56614ebc2b9f4e87b2'
+          command: 'push'
+          format: 'npm'
+          owner: 'test-org-IzW'               # Your Cloudsmith account name or org name (namespace) 
+          repo: 'APITest'           # Your Cloudsmith Repository name (slug)
+          republish: 'true'            # needed ONLY if version is not changing
+          file: 'YOUR-FILENAME.tgz' # npm filename
+          no-wait-for-sync: true
