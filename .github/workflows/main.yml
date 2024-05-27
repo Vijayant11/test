@@ -16,5 +16,5 @@ jobs:
           owner: 'test-org-IzW'               # Your Cloudsmith account name or org name (namespace) 
           repo: 'APITest'           # Your Cloudsmith Repository name (slug)
           republish: 'true'            # needed ONLY if version is not changing
-          file: 'README.md' # npm filename
+          file: 'csm-cloudsmith-npm-cli-1.0.1716809128647552.tgz' # npm filename
           no-wait-for-sync: true
